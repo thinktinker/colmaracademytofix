@@ -268,7 +268,7 @@ footer a:hover{
 
 footer a:active,
 footer a:visited{
-    text-decoration; none;
+    text-decoration: none;
     color: #303646;
 }
    
@@ -402,6 +402,11 @@ footer a:visited{
         text-decoration: none;
         color: gray;
         transform: scale(1.0);
+    }
+    
+    /* Hide .learning-mobile */
+    .learning-mobile{
+        display: none;
     }
     
 /* Set up thesis section */
@@ -609,7 +614,31 @@ footer a:visited{
         padding: 1rem;
     }
 
- /* hide mobile version of thesis exhibit */
+    /* Set the mobile view of the mobile learning content */
+    .learning-mobile .learning-block-content{
+        display: flex;
+        grid-column: 1fr;
+        flex-direction: column;
+        background-color: #f0f0f0;
+        align-items: start;
+        color: #484848;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: x-large;
+    }
+
+    /* reset event block destop */
+    .event-block:last-child{
+        background-color:#fff;
+    }
+
+    .event-block{
+        border-bottom: none;
+    }
+
+
+
+    /* hide mobile version of thesis exhibit */
 
     .thesis-exibit mobile{
         display: none
