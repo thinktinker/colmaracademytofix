@@ -387,8 +387,7 @@ footer a:visited{
     
     /* Set the learning section grid container's content with a left padding */
     .learningcard h6, .learningcard p {
-        font-size: 1rem;        /* set the font-size of each card to 1rem */
-        padding-left: 1rem;     /* change the padding value to use rem */
+        padding-left: 16px;
     
     }
     
