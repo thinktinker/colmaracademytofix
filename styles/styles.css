@@ -278,13 +278,30 @@ footer a:visited{
 
 /* Set Startlearningsection's style */
 
-    .learning-content{
-    background-color: #c8c8c8;
-    margin: auto;
-}
+    /*  FIX:
+        You will need to create an id selector
+        learning to style the container that
+        hosts the cards for 'Start Learning'
 
+        Used a class instead for learning
+    */
+    .learning{
+        display: grid;
+        /* grid-template-columns: full--start/full--end; */
+        grid-column: full--start / full--end;
+        padding: 2rem 4.5rem;
+        background-color: #c8c8c8;
+    }
+
+    /* FIX: update the title style for learning-content */
+    .learning-content{
+        background-color: #c8c8c8;
+        margin: 2rem auto;
+    }
+
+    /* FIX: update the title style for learning-content's title */
     .learning-content div h5{
-        font-size: 1.4rem;
+        font-size: 2rem;
         color: #484848;
         padding: 2rem;
         text-align: center;
@@ -310,7 +327,7 @@ footer a:visited{
         grid-gap: 32px;
         width: 100%;
         height: auto ;
-        padding: 2rem 0 2rem 1.5rem;
+        /* padding: 2rem 0 2rem 1.5rem; */    /* FIX: hidden the padding, use that of id selector learing above */
     }
     
         /* Set the card background to white */
@@ -323,14 +340,18 @@ footer a:visited{
     }
     
     /* Set the learning card h4 with a left padding of 16px*/
+    /* FIX: Set the style for the card, use rem units instead */
     .learningcard h6{
-        padding-left: 16px;
+        font-weight: bolder;
+        padding-left: 1rem;
+        font-size: xx-large; 
     }
     
     /* Set the learning card p tag with a left padding of 16px*/
+    /* font size is relative to learning card */
     .learningcard p{
         padding-left: 16px;
-        font-size: 0.8rem;  /* font size is relative to learning card */
+        font-size: 0.8rem;
         }
     
     /* Set the image in the learning card */
@@ -353,11 +374,21 @@ footer a:visited{
         text-transform: none;
         padding-top: 16px;
         padding-bottom: 32px;
+    } 
+    
+    /* FIX: target the style for the title COURSES */
+    .learningcard .scope:not(:last-child) {
+        font-size: large;
+        font-weight: lighter;
+        text-transform: none;
+        padding: 0.5rem 1rem;
     }   
+
     
     /* Set the learning section grid container's content with a left padding */
     .learningcard h6, .learningcard p {
-        padding-left: 16px;
+        font-size: 1rem;        /* set the font-size of each card to 1rem */
+        padding-left: 1rem;     /* change the padding value to use rem */
     
     }
     
@@ -567,7 +598,12 @@ footer a:visited{
         display: none;
     }
 
-    /* hide mobile version of learning */
+    /* hide desktop version of class learning */
+    .learning{
+        display: none;
+    }
+
+    /* show mobile version of learning */
 
     .learning-mobile{
         display: grid;
@@ -576,12 +612,9 @@ footer a:visited{
 
  /* hide mobile version of thesis exhibit */
 
- .thesis-exibit mobile{
-    display: none
-}
-
-    
-
+    .thesis-exibit mobile{
+        display: none
+    }
 
 }
 
