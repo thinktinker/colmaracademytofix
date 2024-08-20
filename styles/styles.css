@@ -344,7 +344,7 @@ footer a:visited{
     .learningcard h6{
         font-weight: bolder;
         padding-left: 1rem;
-        font-size: xx-large; 
+        font-size: small; 
     }
     
     /* Set the learning card p tag with a left padding of 16px*/
